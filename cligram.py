@@ -19,15 +19,29 @@ class Cligram:
     def following_list(self):
         pass
 
-    def remove_following(self):
+    def unfollow(self):
         pass
 
     def friends(self):
+        print("")
         print("1. Follow\n2. Following list\n3. Unfollow\n4.back")
+        opt = int(input("Choose an option : "))
+        if opt==1:
+            self.follow()
+        elif opt==2:
+            self.following_list()
+        elif opt==3:
+            self.unfollow()
+        elif inp==4:
+            self.main_screen()
+        else:
+            print("Invalid option")
+            self.friends()
 
-    def main_screen():
+    def main_screen(self):
+        print("\nWelcome, "+self.name)
         print("1. Friends\n2. Posts\n3. Back")
-        opt = int(input())
+        opt = int(input("Choose an option : "))
         
         if opt==1:
             self.friends()
@@ -36,17 +50,20 @@ class Cligram:
             self.posts()
         
         elif opt==3:
-            self.main_screen()
+            self.menu()
 
-    def login(Self):
+    def login(self):
         self.name =input("Enter a name : ")
         self.pwd = input("Enter a secure password : ")
 
         for i in self.data:
             user, pwd = i.split("~")
-            if user == name and pwd==pawd:
+            if user == self.name and pwd==self.pwd:
                 self.main_screen()
                 break
+
+        print("Unable to login")
+        self.menu()
 
     def create_account(self):
         name =input("Enter a name : ")
