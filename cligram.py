@@ -1,10 +1,16 @@
-import pyfiglet
-
 class Cligram:
     def __init__(self):
-        print(pyfiglet.figlet_format("cligram"))
-        self.data = None
 
+        self.data = None
+        a="""
+      _ _  
+  ___| (_) __ _ _ __ __ _ _ __ ___  
+ / __| | |/ _` | '__/ _` | '_ ` _ \ 
+| (__| | | (_| | | | (_| | | | | | |
+ \___|_|_|\__, |_|  \__,_|_| |_| |_|
+          |___/
+        """
+        print(a)
         #getting user data from data.txt
         with open("data.txt","r") as f:
             self.data = f.readlines()
@@ -82,7 +88,13 @@ class Cligram:
         self.menu()
 
     def menu(self):
-        print("1. Create Account\n2. Login\n3. Exit\n") 
+        print("""
+        ----------------------------
+        | 1. Create Account         |
+        | 2. Login                  |
+        | 3. Exit                   |
+        ---------------------------- 
+         """) 
         opt = int(input("Choose an option : "))
 
         if opt==1:
