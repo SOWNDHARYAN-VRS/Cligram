@@ -95,6 +95,7 @@ class Cligram:
         | 3. Exit                   |
         ---------------------------- 
          """) 
+    try:    
         opt = int(input("Choose an option : "))
 
         if opt==1:
@@ -106,5 +107,8 @@ class Cligram:
         else:
             print("Invalid option\n")
             self.menu()
+    except:
+        print("Enter a valid number")
+        self.menu()
 
 Cligram().menu()
