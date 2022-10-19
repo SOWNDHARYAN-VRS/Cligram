@@ -2,7 +2,7 @@ class Cligram:
     def __init__(self):
 
         self.data = None
-        a="""
+        title="""
       _ _  
   ___| (_) __ _ _ __ __ _ _ __ ___  
  / __| | |/ _` | '__/ _` | '_ ` _ \ 
@@ -10,27 +10,14 @@ class Cligram:
  \___|_|_|\__, |_|  \__,_|_| |_| |_|
           |___/
         """
-        print(a)
+        print(title)
         #getting user data from data.txt
         with open("data.txt","r") as f:
             self.data = f.readlines()
         f.close()
-    
-    def follow(self):
-        pass
-
-    def followers_list(self):
-        pass
-
-    def following_list(self):
-        pass
-
-    def unfollow(self):
-        pass
 
     def friends(self):
-        print("")
-        print("1. Follow\n2. Following list\n3. Unfollow\n4.back")
+        print("\n1. Follow\n2. Following list\n3. Unfollow\n4.back")
         opt = int(input("Choose an option : "))
         if opt==1:
             self.follow()
