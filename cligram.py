@@ -94,7 +94,7 @@ class Cligram:
         else:
             print("Invalid option\n")
             self.menu()
-    except:
+   except:
         print("Enter a valid number")
         self.menu()
 
